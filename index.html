@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Suburban Schemers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Gochi+Hand&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mustard: '#FFC857',
+              teal: '#2E5266',
+              tomato: '#E5625E',
+              charcoal: '#1F2024',
+              offwhite: '#F9F9F5',
+            },
+            fontFamily: {
+              display: ['"Changa One"', 'cursive'],
+              body: ['Inter', 'sans-serif'],
+              handwriting: ['"Gochi Hand"', 'cursive'],
+            },
+            boxShadow: {
+              'retro': '8px 8px 0px 0px rgba(31, 32, 36, 1)',
+              'retro-sm': '4px 4px 0px 0px rgba(31, 32, 36, 1)',
+              'polaroid': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 12px #fff',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F9F9F5;
+        color: #1F2024;
+      }
+      .clip-paper {
+        clip-path: polygon(0% 0%, 100% 1%, 99% 100%, 1% 99%);
+      }
+      .clip-jagged-top {
+        clip-path: polygon(0% 20px, 5% 0px, 10% 20px, 15% 0px, 20% 20px, 25% 0px, 30% 20px, 35% 0px, 40% 20px, 45% 0px, 50% 20px, 55% 0px, 60% 20px, 65% 0px, 70% 20px, 75% 0px, 80% 20px, 85% 0px, 90% 20px, 95% 0px, 100% 20px, 100% 100%, 0% 100%);
+      }
+      .clip-jagged-bottom {
+        clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 20px), 95% 100%, 90% calc(100% - 20px), 85% 100%, 80% calc(100% - 20px), 75% 100%, 70% calc(100% - 20px), 65% 100%, 60% calc(100% - 20px), 55% 100%, 50% calc(100% - 20px), 45% 100%, 40% calc(100% - 20px), 35% 100%, 30% calc(100% - 20px), 25% 100%, 20% calc(100% - 20px), 15% 100%, 10% calc(100% - 20px), 5% 100%, 0% calc(100% - 20px));
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
