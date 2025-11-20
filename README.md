@@ -14,14 +14,14 @@ Welcome to **The Suburban Schemers**, a delightfully desperate web experience in
 
 ---
 
-## 🌟 Features
+## Features
 
 -   **AI Scheme Generator**: Powered by Google's **Gemini Flash 2.5**, this tool takes a household item and a target (the "mark") to generate a hilarious, absurd, and petty criminal scheme.
 -   **Retro 70s Aesthetic**: A fully custom design system featuring a "Mustard & Ketchup" color palette, brutalist borders, retro shadows, and period-appropriate typography.
 -   **Responsive Design**: Built with Tailwind CSS to look great on everything from a vintage desktop to a modern smartphone.
 -   **Interactive UI**: Smooth animations, hover effects, and a dynamic user experience.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **Frontend Framework**: [React 19](https://react.dev/)
 -   **Build Tool**: [Vite](https://vitejs.dev/)
@@ -30,7 +30,7 @@ Welcome to **The Suburban Schemers**, a delightfully desperate web experience in
 -   **Icons**: [Lucide React](https://lucide.dev/)
 -   **AI Integration**: [Google GenAI SDK](https://www.npmjs.com/package/@google/genai)
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to get the project running locally on your machine.
 
@@ -67,7 +67,7 @@ npm run dev
 
 Open your browser and navigate to `http://localhost:3000` (or the port shown in your terminal).
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── components/          # React components
@@ -82,13 +82,13 @@ Open your browser and navigate to `http://localhost:3000` (or the port shown in 
 └── ...
 ```
 
-## 🤖 How the AI Works
+## How the AI Works
 
 The **Scheme Generator** (`components/SchemeGenerator.tsx`) uses the Google GenAI SDK to communicate with the Gemini model.
 1.  It constructs a prompt asking for a "short, hilarious, absurd, and petty criminal scheme" based on the user's inputs.
 2.  It sets the tone to be "desperate but harmless, 1970s suburban style".
 3.  The response is displayed in a retro-styled card on the UI.
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
