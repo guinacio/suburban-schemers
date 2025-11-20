@@ -1,5 +1,4 @@
 import React from 'react';
-import { ShoppingCart, Coffee, Leaf, Key } from 'lucide-react';
 
 export const Schemes: React.FC = () => {
   // Defined inside component to ensure React elements are created in the correct context
@@ -7,28 +6,28 @@ export const Schemes: React.FC = () => {
     {
       title: "The 'Discount' Shopper",
       description: "Technically, if you taste the grapes before buying them, it's just quality control.",
-      icon: <ShoppingCart size={32} strokeWidth={2.5} />,
+      image: "/images/scheme_discount_shopper.png",
       color: "bg-teal",
       rotate: "-rotate-2"
     },
     {
       title: "The Lawn Job",
       description: "Stealing turf from the golf course to fix the front yard. It's organic architecture.",
-      icon: <Leaf size={32} strokeWidth={2.5} />,
+      image: "/images/scheme_lawn_job.png",
       color: "bg-green-600",
       rotate: "rotate-1"
     },
     {
       title: "The Free Refill",
       description: "Walking into a coffee shop with yesterday's cup. A classic high-margin play.",
-      icon: <Coffee size={32} strokeWidth={2.5} />,
+      image: "/images/scheme_free_refill.png",
       color: "bg-mustard",
       rotate: "-rotate-3"
     },
     {
       title: "Open House Buffet",
       description: "Acting like interested buyers just for the shrimp cocktail and free pens.",
-      icon: <Key size={32} strokeWidth={2.5} />,
+      image: "/images/scheme_open_house.png",
       color: "bg-tomato",
       rotate: "rotate-2"
     }
@@ -37,10 +36,10 @@ export const Schemes: React.FC = () => {
   return (
     <section id="schemes" className="py-20 bg-teal border-y-4 border-charcoal relative overflow-hidden">
       {/* Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none" 
-        style={{ 
-          backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)', 
-          backgroundSize: '24px 24px' 
+      <div className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
+          backgroundSize: '24px 24px'
         }}>
       </div>
 
@@ -59,17 +58,18 @@ export const Schemes: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6">
           {schemes.map((scheme, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`bg-white p-4 shadow-polaroid transform ${scheme.rotate} hover:scale-105 hover:z-10 hover:rotate-0 transition-all duration-300 cursor-pointer group`}
             >
-              <div className={`${scheme.color} w-full aspect-[4/3] mb-4 flex items-center justify-center border-2 border-charcoal/10 group-hover:border-charcoal transition-colors relative overflow-hidden`}>
+              <div className={`${scheme.color} w-full aspect-square mb-4 flex items-center justify-center border-2 border-charcoal/10 group-hover:border-charcoal transition-colors relative overflow-hidden`}>
+                <img
+                  src={scheme.image}
+                  alt={scheme.title}
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 grayscale-[20%] group-hover:grayscale-0"
+                />
                 {/* Inner grain texture overlay via CSS gradient to avoid external deps */}
-                <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000)', backgroundSize: '4px 4px', backgroundPosition: '0 0, 2px 2px' }}></div>
-                
-                <div className="text-white drop-shadow-md transform group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300">
-                  {scheme.icon}
-                </div>
+                <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000)', backgroundSize: '4px 4px', backgroundPosition: '0 0, 2px 2px' }}></div>
               </div>
               <div className="px-1 pb-2">
                 <h3 className="font-display text-xl text-charcoal mb-2 leading-none">{scheme.title}</h3>
@@ -78,11 +78,11 @@ export const Schemes: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-16">
-             <p className="text-offwhite/60 text-sm italic font-handwriting text-lg transform -rotate-1">
-                *Legal Disclaimer: None of these actually worked well.
-             </p>
+          <p className="text-offwhite/60 text-sm italic font-handwriting text-lg transform -rotate-1">
+            *Legal Disclaimer: None of these actually worked well.
+          </p>
         </div>
       </div>
     </section>
