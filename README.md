@@ -1,7 +1,3 @@
-<div align="center">
-  <img width="1200" height="475" alt="The Suburban Schemers Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # The Suburban Schemers
 
 **When life shuts the door, pick the lock.**
@@ -9,6 +5,12 @@
 Welcome to **The Suburban Schemers**, a delightfully desperate web experience inspired by the chaotic energy of movies like "Fun with Dick and Jane". This project showcases a retro-styled landing page for a fictional duo turning suburban boredom into petty larceny, featuring an **AI-powered Scheme Generator** that cooks up foolproof* criminal plots on demand.
 
 > *Results may vary. Prison time possible.*
+
+---
+
+## Screenshot
+
+![The Suburban Schemers Screenshot](public/screenshots/full_page.jpeg)
 
 ---
 
@@ -86,15 +88,6 @@ The **Scheme Generator** (`components/SchemeGenerator.tsx`) uses the Google GenA
 1.  It constructs a prompt asking for a "short, hilarious, absurd, and petty criminal scheme" based on the user's inputs.
 2.  It sets the tone to be "desperate but harmless, 1970s suburban style".
 3.  The response is displayed in a retro-styled card on the UI.
-
-## 🤝 Contributing
-
-Got a better scheme? Found a bug in the getaway car? Contributions are welcome!
-1.  Fork the project.
-2.  Create your feature branch (`git checkout -b feature/AmazingScheme`).
-3.  Commit your changes (`git commit -m 'Add some AmazingScheme'`).
-4.  Push to the branch (`git push origin feature/AmazingScheme`).
-5.  Open a Pull Request.
 
 ## 📄 License
 
