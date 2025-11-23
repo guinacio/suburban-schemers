@@ -16,7 +16,15 @@ export const SchemeGenerator: React.FC = () => {
     setGeneratedScheme('');
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      // Get API key from runtime injection (Cloud Run) or build-time (local dev)
+      const apiKey = (window as any).__GEMINI_API_KEY__ || process.env.API_KEY;
+      
+      if (!apiKey) {
+        setGeneratedScheme("The feds cut the line! (API key not configured)");
+        return;
+      }
+      
+      const ai = new GoogleGenAI({ apiKey });
       
       const prompt = `
         You are a comedy writer for a movie like "Fun with Dick and Jane". 
