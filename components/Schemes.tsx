@@ -1,4 +1,8 @@
 import React from 'react';
+import { SchemeDiscountSVG } from './graphics/SchemeDiscountSVG';
+import { SchemeLawnSVG } from './graphics/SchemeLawnSVG';
+import { SchemeRefillSVG } from './graphics/SchemeRefillSVG';
+import { SchemeOpenHouseSVG } from './graphics/SchemeOpenHouseSVG';
 
 export const Schemes: React.FC = () => {
   // Defined inside component to ensure React elements are created in the correct context
@@ -6,28 +10,28 @@ export const Schemes: React.FC = () => {
     {
       title: "The 'Discount' Shopper",
       description: "Technically, if you taste the grapes before buying them, it's just quality control.",
-      image: "/images/scheme_discount_shopper.png",
+      Graphic: SchemeDiscountSVG,
       color: "bg-teal",
       rotate: "-rotate-2"
     },
     {
       title: "The Lawn Job",
       description: "Stealing turf from the golf course to fix the front yard. It's organic architecture.",
-      image: "/images/scheme_lawn_job.png",
+      Graphic: SchemeLawnSVG,
       color: "bg-green-600",
       rotate: "rotate-1"
     },
     {
       title: "The Free Refill",
       description: "Walking into a coffee shop with yesterday's cup. A classic high-margin play.",
-      image: "/images/scheme_free_refill.png",
+      Graphic: SchemeRefillSVG,
       color: "bg-mustard",
       rotate: "-rotate-3"
     },
     {
       title: "Open House Buffet",
       description: "Acting like interested buyers just for the shrimp cocktail and free pens.",
-      image: "/images/scheme_open_house.png",
+      Graphic: SchemeOpenHouseSVG,
       color: "bg-tomato",
       rotate: "rotate-2"
     }
@@ -63,11 +67,7 @@ export const Schemes: React.FC = () => {
               className={`bg-white p-4 shadow-polaroid transform ${scheme.rotate} hover:scale-105 hover:z-10 hover:rotate-0 transition-all duration-300 cursor-pointer group`}
             >
               <div className={`${scheme.color} w-full aspect-square mb-4 flex items-center justify-center border-2 border-charcoal/10 group-hover:border-charcoal transition-colors relative overflow-hidden`}>
-                <img
-                  src={scheme.image}
-                  alt={scheme.title}
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300 grayscale-[20%] group-hover:grayscale-0"
-                />
+                <scheme.Graphic />
                 {/* Inner grain texture overlay via CSS gradient to avoid external deps */}
                 <div className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000)', backgroundSize: '4px 4px', backgroundPosition: '0 0, 2px 2px' }}></div>
               </div>
